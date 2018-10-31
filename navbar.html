@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>navbar</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<style type="text/css">
+	body
+	{
+		margin: 0;
+		padding: 0;
+		font-family: 'Open Sans', sans-serif;
+		overflow: hidden;
+	}
+	.content
+	{
+		position: fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height: 100vh;
+		background: url(download.png);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: : -15px;
+		transition: 0.5s;
+	}
+	ul
+	{
+		position: relative;
+	}
+	ul li
+	{
+		list-style: none;
+		text-align: center;
+		padding: 5px;
+	}
+	ul li a
+	{
+		display: block;
+		text-decoration: none;
+		padding: 5px;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 2em;
+		letter-spacing: 1px;
+		font-weight: bold;
+		transition: 0.5s;
+
+	}
+	ul li a:hover
+	{
+		color: #ffeb3b;
+	}
+   ul li a:before
+   {
+   	content: attr(data-text);
+   	position: absolute;
+   	top:0;
+   	left:50%;
+   	transform: translate(-50%,-50%);
+   	transition: 0.5s;
+   	font-size: 3em;
+   	opacity: 0;
+   	pointer-events: none;
+   	z-index: -1;
+   	font-family: initial;
+   }
+   ul li a:hover:before
+   {
+   	opacity: 0.1;
+   	top: 50%;
+   }
+
+</style>
+<script>
+	$(document).ready(function()
+	{
+		$(".scrollup").click(function(){
+        $(".content").hide("slow");
+    });
+	});
+</script>
+
+</head>
+<body>
+	<div class="content">
+			<ul>
+				<li><a href="newhome.html" target="_blank"  data-text="Home">Home</a></li>
+				
+				<li><a href="rooms.html" target="_blank" data-text="Rooms">Rooms</a></li>
+				<li><a href="gallary.html"  target="_blank" data-text="Gallery">Gallery</a></li>
+				<li><a href="restaurent.html" target="_blank" data-text="Restaurent">Restaurent</a></li>
+				<li><a href="about.html" target="_blank" data-text="About">About</a></li>
+				<li><a href="#" target="_blank" data-text="Contact">Contact</a></li>
+				<li><a href="#" target="_blank" data-text="Book Cab">Book Cab</a></li>
+				<li><a href="#" target="_blank" data-text="VIP">VIP</a></li>
+
+			</ul>
+
+			<div class="scrollup" style="width:32px; height:32px; background: #C5A46D;margin-top:600px;margin-left: -9%; cursor: pointer;">
+		<a href=""><img src="scrollup.png"></a>
+		
+	</div>
+		</div>
+		
+
+</body>
+</html>
